@@ -1,3 +1,10 @@
 # Ignore Git files
 .git
+<<<<<<< HEAD
 .gitignore
+=======
+.gitignore
+__pycache__/
+.venv
+.env
+>>>>>>> main

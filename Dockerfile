@@ -16,4 +16,9 @@ COPY search_engine/ ./search_engine/
 COPY builder/ ./builder/
 
 # launch Streamlit app
+<<<<<<< HEAD
 CMD ["streamlit", "run", "search_engine/main.py", "--server.port=8080", "--server.address=0.0.0.0"]
+=======
+#using Render environment variable PORT
+CMD ["bash", "-lc", "streamlit run search_engine/main.py --server.port=${PORT:-8080} --server.address=0.0.0.0 --server.headless=true"]
+>>>>>>> main
