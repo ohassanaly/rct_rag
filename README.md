@@ -16,19 +16,17 @@ Try for example: `cryoglobulinemia vasculitis double-blind study`
 
 ## Project Overview
 
-This project provides several search engines to explore **Randomized Clinical Trial (RCT) protocols** developed at **URC Saint Louis**.
+This project provides several search engines to explore **Randomized Clinical Trial (RCT) protocols** from [URC Saint Louis](https://recherche-hopitauxnord-u-pariscite.aphp.fr/unite-de-recherche-clinique-lariboisiere-saint-louis-urc/)
 
 Currently, it includes:
 
 - **Sparse Search (TF-IDF)** → semantic keyword-based retrieval  
 - **Exact Search (CTRL+F style)** → strict word matching with wildcard and operators (AND, OR)
-- **Database-like Explorer** → direct browsing of the full files
+- **Database-like Explorer** → direct browsing of the full database
 
 ---
 
-## Dataset
+## Database
 
-- **40 protocols available** at the moment  
+- **40 protocols available**  
 - The collection will continue to grow over time
-
-<!-- ![Alt text](assets/rag_illustration.png) -->

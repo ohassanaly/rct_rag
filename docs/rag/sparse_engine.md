@@ -1,6 +1,7 @@
-## The TF-IDF search engine  
+## Similarity Search Engine
+Some details about the Sparse search Engine architecture
 
-![Sparse Search Engine](assets/sparse_search_engine.png)
+![Similarity Search Engine](assets/sparse_search_engine.png)
 
 - `display`: handles displaying the title and the query.  
 - `load_sparse`: loads the different files built in the Builder module.  

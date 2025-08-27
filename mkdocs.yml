@@ -5,13 +5,13 @@ nav:
   - Home: index.md
   
   - Demo :
-    - Sparse Engine : ./demo/sparse_engine_demo.md
-    - Key-Words Engine : ./demo/exact_engine_demo.md
+    - Similarity : ./demo/sparse_engine_demo.md
+    - Key-Words : ./demo/exact_engine_demo.md
     - Database : ./demo/database_demo.md
 
   - Project Structure : 
     - Builder: ./rag/builder.md
-    - Search Engines: ./rag/search_engine.md
+    - Search Engine: ./rag/search_engine.md
     - Sparse Search Engine: ./rag/sparse_engine.md
 
   - About: about.md
