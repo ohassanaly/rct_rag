@@ -14,11 +14,11 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>RCT RAG</title>
+        <title>RCT Search Engines</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-is-this-project" class="md-skip">
+        <a href="#getting-started" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +76,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="RCT RAG" class="md-header__button md-logo" aria-label="RCT RAG" data-md-component="logo">
+    <a href="." title="RCT Search Engines" class="md-header__button md-logo" aria-label="RCT Search Engines" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -90,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            RCT RAG
+            RCT Search Engines
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -174,13 +174,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="RCT RAG" class="md-nav__button md-logo" aria-label="RCT RAG" data-md-component="logo">
+    <a href="." title="RCT Search Engines" class="md-nav__button md-logo" aria-label="RCT Search Engines" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    RCT RAG
+    RCT Search Engines
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -242,11 +242,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Project Structure
+      Quick Start
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-the-hosted-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Hosted Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-locally-via-git-and-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Locally via Git and Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -254,6 +278,15 @@
   <a href="#demos" class="md-nav__link">
     <span class="md-ellipsis">
       Demos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
     </span>
   </a>
   
@@ -317,7 +350,7 @@
   
   
   <span class="md-ellipsis">
-    Sparse Engine
+    Similarity
     
   </span>
   
@@ -340,7 +373,7 @@
   
   
   <span class="md-ellipsis">
-    Key-Words Engine
+    Key-Words
     
   </span>
   
@@ -358,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="demo/database_demo.md" class="md-nav__link">
+      <a href="demo/database_demo/" class="md-nav__link">
         
   
   
@@ -404,7 +437,7 @@
   
   
   <span class="md-ellipsis">
-    Different steps
+    Project Structure
     
   </span>
   
@@ -415,7 +448,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Different steps
+            Project Structure
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -432,6 +465,29 @@
   
   <span class="md-ellipsis">
     Builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rag/search_engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Engine
     
   </span>
   
@@ -521,11 +577,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Project Structure
+      Quick Start
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-the-hosted-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Hosted Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-locally-via-git-and-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Locally via Git and Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -533,6 +613,15 @@
   <a href="#demos" class="md-nav__link">
     <span class="md-ellipsis">
       Demos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
     </span>
   </a>
   
@@ -554,29 +643,54 @@
 
 
 
-<h1 id="what-is-this-project">What is this project?</h1>
-<p>This project offers multiple search engines to explore <strong>Randomized Clinical Trial (RCT) protocols</strong> created at <strong>URC Saint Louis</strong>.</p>
+<h1 id="getting-started">Getting Started</h1>
+<p>This project provides several search engines to explore <strong>Randomized Clinical Trial (RCT) protocols</strong> from <a href="https://recherche-hopitauxnord-u-pariscite.aphp.fr/unite-de-recherche-clinique-lariboisiere-saint-louis-urc/">URC Saint Louis</a></p>
 <p><img alt="Project overview" src="assets/smart_image.jpg" /></p>
 <hr />
-<h2 id="project-structure">Project Structure</h2>
+<h2 id="quick-start">Quick Start</h2>
+<p>You have two options to start using the RCT search engines:</p>
+<h3 id="use-the-hosted-version">Use the Hosted Version</h3>
+<p>No setup is required. Simply visit the web application:
+<a href="https://rct-rag.onrender.com/">RCT_Search_Engine</a></p>
+<h3 id="run-locally-via-git-and-docker">Run Locally via Git and Docker</h3>
 <ul>
-<li><a href="rag/builder/"><code>builder</code></a> – Handles data preparation and index construction  </li>
-<li><a href="rag/sparse_engine/"><code>search_engine</code></a> – Contains the application logic and user interface  </li>
+<li><strong>Clone the repository</strong>:</li>
+</ul>
+<pre><code class="language-bash">git clone https://github.com/ohassanaly/rct_rag.git
+cd rct_rag
+</code></pre>
+<ul>
+<li><strong>Build and run the Docker container</strong>:</li>
+</ul>
+<pre><code class="language-bash">docker build -t rct_search .
+docker run -p 8080:8080 rct_search
+</code></pre>
+<ul>
+<li><strong>Open your browser at http://localhost:8080 to access the application.</strong></li>
 </ul>
 <hr />
 <h2 id="demos">Demos</h2>
 <p>You have access to <strong>three search engines</strong>:</p>
 <ul>
 <li>
-<p><strong>Sparse Engine</strong> - <a href="demo/sparse_engine_demo/"><code>demo</code></a>
-Retrieves the most relevant protocols for multi-word queries using TF-IDF.</p>
+<p><strong>Similarity</strong> - <a href="demo/sparse_engine_demo/"><code>demo</code></a><br />
+Retrieves the most relevant protocols based on semantic keyword-based retrieval (TF-IDF embedding under the hood).</p>
 </li>
 <li>
-<p><strong>Key-words Engine</strong> - <a href="demo/exact_engine_demo/"><code>demo</code></a></p>
+<p><strong>Key-Words</strong> - <a href="demo/exact_engine_demo/"><code>demo</code></a><br />
+Finds protocols containing the exact keywords of your query, supporting wildcards (<code>*</code>) adn operators(AND/OR) for flexible matching.</p>
 </li>
 <li>
-<p><strong>Database</strong> - <a href="demo/database_demo.md"><code>demo</code></a></p>
+<p><strong>Database</strong> - <a href="demo/database_demo/"><code>demo</code></a><br />
+Allows direct browsing and exploration of database protocols.</p>
 </li>
+</ul>
+<hr />
+<h2 id="project-structure">Project Structure</h2>
+<ul>
+<li><a href="rag/builder/"><code>builder</code></a> – Handles data preparation and construction of the search engines   </li>
+<li><a href="rag/search_engine/"><code>search_engine</code></a> – Contains the application logic and user interface  </li>
+<li><a href="rag/sparse_engine/"><code>sparse_search_engine</code></a> – Details on the Similarity Search Engine </li>
 </ul>
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../sparse_engine_demo/">
+        <link rel="prev" href="../exact_engine_demo/">
       
       
-        <link rel="next" href="../database_demo/">
+        <link rel="next" href="../../rag/builder/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Key-Words - RCT Search Engines</title>
+        <title>Database - RCT Search Engines</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Key-Words
+              Database
             
           </span>
         </div>
@@ -276,6 +276,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../exact_engine_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Key-Words
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -291,7 +314,7 @@
   
   
   <span class="md-ellipsis">
-    Key-Words
+    Database
     
   </span>
   
@@ -304,7 +327,7 @@
   
   
   <span class="md-ellipsis">
-    Key-Words
+    Database
     
   </span>
   
@@ -334,15 +357,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#display" class="md-nav__link">
     <span class="md-ellipsis">
       Display
@@ -355,29 +369,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../database_demo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Database
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -560,15 +551,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#display" class="md-nav__link">
     <span class="md-ellipsis">
       Display
@@ -593,30 +575,21 @@
 
 
 
-  <h1>Key-Words</h1>
+  <h1>Database</h1>
 
 <h3 id="query">Query</h3>
-<p>The exact search engine supports logical operators and wildcards to refine your search:</p>
-<ul>
-<li><strong>Simple multi-word queries</strong> – if you enter multiple words without operators, they must appear exactly as typed and consecutively.  </li>
-<li><strong>AND</strong> – all terms connected with <code>AND</code> must appear at least once in the section for it to match.  </li>
-<li><strong>OR</strong> – at least one of the terms connected with <code>OR</code> must appear for a match.  </li>
-<li><strong>Wildcard (<code>*</code>)</strong> – placing an asterisk at the end of a word allows matching any term starting with that prefix. For example, <code>intervent*</code> will match <code>intervention</code>, <code>interventions</code>, or <code>interventive</code>.  </li>
-<li><strong>Brackets (<code>()</code>)</strong> – currently not implemented.</li>
-</ul>
-<p>These operators allow more flexible and precise querying of the protocol sections.</p>
-<p><strong>Example</strong>: <code>cryoglobulinemia vasculitis AND double-blind study</code></p>
-<h3 id="sections">Sections</h3>
-<p>As shown, you can select a single section or all sections. Selecting multiple individual sections at once is not supported yet.</p>
-<p><img alt="Query score visualization" src="../assets/Score_exact_doc.png" /></p>
+<p>The database engine allows you to directly browse and consult all available protocols. Unlike the search engines, it does not rank studies by relevance—it provides a straightforward view of the stored documents.</p>
+<p>You can query specific documents using keywords, e.g., <code>MSC</code>.</p>
+<p><img alt="Database query" src="../assets/Database_doc.png" /></p>
 <h3 id="display">Display</h3>
-<p>The results are displayed as:</p>
+<p>The interface includes:</p>
 <ol>
-<li><strong>Number of studies</strong> – shows how many protocols or sections (if all sections are selected) match your query.</li>
-<li><strong>List of studies or sections</strong> – with the occurrences of your query terms <strong>highlighted</strong>.</li>
+<li><strong>List of all protocols</strong> – each entry shows the study title.  </li>
+<li><strong>Document access</strong> – open any study to read its full text.  </li>
 <li><strong>Downloadable PDFs</strong> – download the protocol in PDF format.</li>
 </ol>
-<p><img alt="List of studies" src="../assets/Results_exact_doc.png" /></p>
+<p><img alt="Database view" src="../assets/Database_view_doc.png" /></p>
+<p>This engine is designed for easy exploration and consultation of the complete protocol database without performing a relevance-based search.</p>
 
 
 

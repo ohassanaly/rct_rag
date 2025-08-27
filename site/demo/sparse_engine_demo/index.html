@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>Sparse Engine - RCT RAG</title>
+        <title>Similarity - RCT Search Engines</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#query" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -73,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="RCT RAG" class="md-header__button md-logo" aria-label="RCT RAG" data-md-component="logo">
+    <a href="../.." title="RCT Search Engines" class="md-header__button md-logo" aria-label="RCT Search Engines" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -87,13 +92,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            RCT RAG
+            RCT Search Engines
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sparse Engine
+              Similarity
             
           </span>
         </div>
@@ -171,13 +176,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="RCT RAG" class="md-nav__button md-logo" aria-label="RCT RAG" data-md-component="logo">
+    <a href="../.." title="RCT Search Engines" class="md-nav__button md-logo" aria-label="RCT Search Engines" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    RCT RAG
+    RCT Search Engines
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -258,17 +263,74 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Similarity
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Sparse Engine
+    Similarity
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preprocess
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -287,7 +349,7 @@
   
   
   <span class="md-ellipsis">
-    Key-Words Engine
+    Key-Words
     
   </span>
   
@@ -305,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database_demo.md" class="md-nav__link">
+      <a href="../database_demo/" class="md-nav__link">
         
   
   
@@ -351,7 +413,7 @@
   
   
   <span class="md-ellipsis">
-    Different steps
+    Project Structure
     
   </span>
   
@@ -362,7 +424,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Different steps
+            Project Structure
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -379,6 +441,29 @@
   
   <span class="md-ellipsis">
     Builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/search_engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Engine
     
   </span>
   
@@ -459,6 +544,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preprocess
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -473,26 +593,44 @@
 
 
 
-  <h1>Sparse Engine</h1>
+  <h1>Similarity</h1>
 
-<p><img alt="Query score visualization" src="assets/score_doc.png" /></p>
+<h3 id="query">Query</h3>
+<p>The results do not always contain all the query terms: a study can rank first even if only some of the words are present, as long as those terms are highly relevant.</p>
+<p><strong>Example</strong>: <code>cryoglobulinemia vasculitis double-blind study</code></p>
+<h3 id="preprocess">Preprocess</h3>
+<p>Each query goes through a <strong>preprocessing pipeline</strong> to normalize and clean the data before searching.  </p>
+<p>The main steps are:</p>
+<ol>
+<li><strong>Unicode normalization</strong> – remove accents and special characters.  </li>
+<li><strong>Acronym expansion</strong> – replace acronyms (both generic like <code>vs → versus</code> and study-specific ones) by their definitions.  </li>
+<li><strong>Roman numeral handling</strong> – convert expressions such as <code>Grade IV</code> or <code>Phase II</code> into numeric equivalents (<code>Grade4</code>, <code>Phase2</code>).  </li>
+<li><strong>Lemmatization</strong> – reduce words to their base form (e.g., <em>studies</em> → <em>study</em>, <em>blinded</em> → <em>blind</em>).  </li>
+<li><strong>Stopword</strong> – filter out common words (<code>the</code>, <code>and</code>, <code>or</code>, ...)</li>
+<li><strong>Digit and noise cleaning</strong> – remove standalone numbers, patterns like <code>d14</code>, <code>w2</code>, <code>m6</code>, and measurement expressions (<code>10mg</code>, <code>3ml</code>, …).</li>
+<li><strong>Final filtering</strong> – lowercase everything, remove punctuation, and return a clean text.  </li>
+</ol>
+<p>This ensures that queries and documents are normalized, making matches more accurate and robust across variations in writing.</p>
+<p>For our example : 
+<img alt="Query_preprocessed_doc" src="../assets/preprocessed_doc.png" /></p>
+<p>You have to validate to display results</p>
+<h3 id="display">Display</h3>
+<p><img alt="Query score visualization" src="../assets/score_doc.png" /></p>
 <p>The results are displayed as:</p>
 <ol>
 <li><strong>A score graph</strong> showing the top-ranked protocols for your query.  </li>
 <li><strong>A list of matching studies</strong> with their titles and metadata.  </li>
+<li><strong>Downloadable PDFs</strong> – download the protocol in PDF format.</li>
 </ol>
-<p><img alt="List of studies" src="assets/List_docs.png" /></p>
+<p><img alt="List of studies" src="../assets/List_docs.png" /></p>
 <p>For each study, you can open the document and view the <strong>highlighted occurrences</strong> of your search terms:  </p>
-<p><img alt="Highlighted results" src="assets/Highlight_docs.png" /></p>
+<p><img alt="Highlighted results" src="../assets/Highlight_docs.png" /></p>
 
 
 
 
 
 
-
-  
-  
 
 
 
