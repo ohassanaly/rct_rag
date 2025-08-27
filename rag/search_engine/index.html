@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../demo/database_demo/">
+        <link rel="prev" href="../builder/">
       
       
-        <link rel="next" href="../search_engine/">
+        <link rel="next" href="../sparse_engine/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Builder - RCT Search Engines</title>
+        <title>Search Engine - RCT Search Engines</title>
       
     
     
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Builder
+              Search Engine
             
           </span>
         </div>
@@ -362,6 +362,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -377,36 +400,13 @@
   
   
   <span class="md-ellipsis">
-    Builder
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../search_engine/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     Search Engine
     
   </span>
   
 
       </a>
+      
     </li>
   
 
@@ -496,21 +496,17 @@
 
 
 
-  <h1>Builder</h1>
+  <h1>Search Engine</h1>
 
-<p><img alt="Builder" src="../assets/builder.png" /></p>
-<p><strong>Builder</strong>: This module is responsible for data preparation and the construction of search engines. It contains:  </p>
+<p><strong>Search_engine</strong>: This module manages the user interface and document search. It contains:  </p>
 <ul>
-<li><code>extract_pdf</code>: extraction of text from PDF files.  </li>
-<li><code>acronyms</code>: management and extraction of acronyms found in the protocols. </li>
-<li><code>sections_regroup</code>: organization and regrouping of document sections.  </li>
-<li><code>exact_engine</code> and <code>sparse_engine</code>: modules for building keyword-based and TF-IDF search engines.</li>
-<li><code>top terms</code> : Top terms for each study use in display of results</li>
-<li><code>config</code>: configuration files for data processing and building.  </li>
-<li><code>data</code>: storage of source files and datasets.  </li>
-<li><code>utils</code>: utility functions for preprocessing and data handling.</li>
+<li><code>app</code>: files related to invoking the selected search engine for consultation and querying.  </li>
+<li><code>config</code>: configuration files for search engine parameters.  </li>
+<li><code>core</code>: main search engine logic.  </li>
+<li><code>display</code>: functions for formatting and displaying search results.  </li>
+<li><code>utils</code>: utility functions for search operations and result handling.  </li>
 </ul>
-<p>The script <code>main_builder.py</code> orchestrates the entire process of database and engines constructions.  </p>
+<p>The script <code>main.py</code> runs the application and enables user interaction.  </p>
 
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../demo/database_demo/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../search_engine/">
+        <link rel="next" href="../exact_engine_demo/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Builder - RCT Search Engines</title>
+        <title>Similarity - RCT Search Engines</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#query" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Builder
+              Similarity
             
           </span>
         </div>
@@ -208,18 +213,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -235,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Demo
@@ -246,10 +253,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../demo/sparse_engine_demo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Similarity
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -260,6 +287,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preprocess
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -272,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../demo/exact_engine_demo/" class="md-nav__link">
+      <a href="../exact_engine_demo/" class="md-nav__link">
         
   
   
@@ -295,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../demo/database_demo/" class="md-nav__link">
+      <a href="../database_demo/" class="md-nav__link">
         
   
   
@@ -322,20 +394,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -351,7 +421,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Project Structure
@@ -362,17 +432,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../rag/builder/" class="md-nav__link">
         
   
   
@@ -383,7 +446,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -396,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../search_engine/" class="md-nav__link">
+      <a href="../../rag/search_engine/" class="md-nav__link">
         
   
   
@@ -419,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sparse_engine/" class="md-nav__link">
+      <a href="../../rag/sparse_engine/" class="md-nav__link">
         
   
   
@@ -482,6 +544,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preprocess
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -496,21 +593,38 @@
 
 
 
-  <h1>Builder</h1>
+  <h1>Similarity</h1>
 
-<p><img alt="Builder" src="../assets/builder.png" /></p>
-<p><strong>Builder</strong>: This module is responsible for data preparation and the construction of search engines. It contains:  </p>
-<ul>
-<li><code>extract_pdf</code>: extraction of text from PDF files.  </li>
-<li><code>acronyms</code>: management and extraction of acronyms found in the protocols. </li>
-<li><code>sections_regroup</code>: organization and regrouping of document sections.  </li>
-<li><code>exact_engine</code> and <code>sparse_engine</code>: modules for building keyword-based and TF-IDF search engines.</li>
-<li><code>top terms</code> : Top terms for each study use in display of results</li>
-<li><code>config</code>: configuration files for data processing and building.  </li>
-<li><code>data</code>: storage of source files and datasets.  </li>
-<li><code>utils</code>: utility functions for preprocessing and data handling.</li>
-</ul>
-<p>The script <code>main_builder.py</code> orchestrates the entire process of database and engines constructions.  </p>
+<h3 id="query">Query</h3>
+<p>The results do not always contain all the query terms: a study can rank first even if only some of the words are present, as long as those terms are highly relevant.</p>
+<p><strong>Example</strong>: <code>cryoglobulinemia vasculitis double-blind study</code></p>
+<h3 id="preprocess">Preprocess</h3>
+<p>Each query goes through a <strong>preprocessing pipeline</strong> to normalize and clean the data before searching.  </p>
+<p>The main steps are:</p>
+<ol>
+<li><strong>Unicode normalization</strong> – remove accents and special characters.  </li>
+<li><strong>Acronym expansion</strong> – replace acronyms (both generic like <code>vs → versus</code> and study-specific ones) by their definitions.  </li>
+<li><strong>Roman numeral handling</strong> – convert expressions such as <code>Grade IV</code> or <code>Phase II</code> into numeric equivalents (<code>Grade4</code>, <code>Phase2</code>).  </li>
+<li><strong>Lemmatization</strong> – reduce words to their base form (e.g., <em>studies</em> → <em>study</em>, <em>blinded</em> → <em>blind</em>).  </li>
+<li><strong>Stopword</strong> – filter out common words (<code>the</code>, <code>and</code>, <code>or</code>, ...)</li>
+<li><strong>Digit and noise cleaning</strong> – remove standalone numbers, patterns like <code>d14</code>, <code>w2</code>, <code>m6</code>, and measurement expressions (<code>10mg</code>, <code>3ml</code>, …).</li>
+<li><strong>Final filtering</strong> – lowercase everything, remove punctuation, and return a clean text.  </li>
+</ol>
+<p>This ensures that queries and documents are normalized, making matches more accurate and robust across variations in writing.</p>
+<p>For our example : 
+<img alt="Query_preprocessed_doc" src="../assets/preprocessed_doc.png" /></p>
+<p>You have to validate to display results</p>
+<h3 id="display">Display</h3>
+<p><img alt="Query score visualization" src="../assets/score_doc.png" /></p>
+<p>The results are displayed as:</p>
+<ol>
+<li><strong>A score graph</strong> showing the top-ranked protocols for your query.  </li>
+<li><strong>A list of matching studies</strong> with their titles and metadata.  </li>
+<li><strong>Downloadable PDFs</strong> – download the protocol in PDF format.</li>
+</ol>
+<p><img alt="List of studies" src="../assets/List_docs.png" /></p>
+<p>For each study, you can open the document and view the <strong>highlighted occurrences</strong> of your search terms:  </p>
+<p><img alt="Highlighted results" src="../assets/Highlight_docs.png" /></p>
 
 
 
