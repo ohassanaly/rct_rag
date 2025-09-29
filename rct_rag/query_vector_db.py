@@ -9,7 +9,6 @@ from openai import OpenAI
 class RephrasedQuery(BaseModel):
     queries: list[str]
 
-
 def rephrase_query(query: str, client) -> list[str]:
     """
     Given a text query, use an LLM to rephrase the query in 3 different ways,
@@ -29,8 +28,7 @@ def rephrase_query(query: str, client) -> list[str]:
     event = completion.choices[0].message.parsed
     return event.queries
 
-
-def query(user_query: str, collection, llm_client, top_k: int = 2) -> dict:
+def query(user_query: str, collection, llm_client, section_filtering:str ="", top_k: int = 2) -> dict:
     """
     given a user query :
     rephrases it
@@ -38,16 +36,27 @@ def query(user_query: str, collection, llm_client, top_k: int = 2) -> dict:
     returns : top-k results ids and distance for each query
     """
     rephrasing = rephrase_query(user_query, llm_client)
-    result = collection.query(
+
+    if section_filtering == "":
+          result = collection.query(
+          query_texts=[user_query] + rephrasing,
+          n_results=top_k,
+          include=["documents", "distances"],
+      )
+
+    else :
+        assert section_filtering in list(section_categories.keys()), "section_filetring should be a valid section"
+        result = collection.query(
         query_texts=[user_query] + rephrasing,
         n_results=top_k,
         include=["documents", "distances"],
-        # TODO later : possible to use where argument and save section as a meta data to query only a given section
-    )
+        where={"section": section_filtering}
+      )
+
     return result
 
-
 if __name__ == "__main__":
+
     load_dotenv()
     llm_client = OpenAI()
     chroma_client = chromadb.CloudClient(
@@ -58,6 +67,6 @@ if __name__ == "__main__":
     collection = chroma_client.get_collection(name="rct_summaries")
 
     user_query = "dose finding clinical trial"
-    result = query(user_query, collection, llm_client)
+    result = query(user_query, collection, llm_client, "INCLUSION CRITERIA")
     print(result["ids"])
     print(result["distances"])

@@ -25,10 +25,18 @@ if __name__ == "__main__":
     #     )
     # )
     collection = chroma_client.get_collection(name="rct_summaries")
-
-    collection.add(
-        ids=list(data.keys()),
-        documents=[
-            ", ".join(f"{k}:{v}" for k, v in d.items()) for d in list(data.values())
-        ],
-    )
+    #1 line per study and per section
+    for study, summary in data.items():
+        for section, text in summary.items() :
+            collection.add(ids = f"{study}, {section}",
+                           metadatas= [{"study" : study,
+                                       "section" : section}],
+                           documents=[text],
+            )
+    #previous version with only 1 line per study           
+    # collection.add(
+    #     ids=list(data.keys()),
+    #     documents=[
+    #         ", ".join(f"{k}:{v}" for k, v in d.items()) for d in list(data.values())
+    #     ],
+    # )
