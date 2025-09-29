@@ -53,7 +53,7 @@
         "Sources of funding for the trial": "“Subvention de recherche Thérapie génique et cellulaire en\nnéphrologie”(Subv.Thérapie génique FdR-AFM_AIRG 2014) funding by\n« Fondation du Rein and l’Association Française contre les Myopathies\n(AFM Téléthon) », in collaboration with « l’AIRG France\" and DRCI\n(sponsor AP-HP)",
         "Trial will have a Data\nMonitoring Committee": "Yes"
     },
-    "CAALLF01_protocole_V6_20181211": {
+    "CAALLF01": {
         "Name of the study": "CAALL-F01: a French protocol for the treatment of acute lymphoblastic leukemia\n(ALL) in children and adolescents",
         "Study committee\nrepresentatives": "Coordinating investigator: Pr André BARUCHEL\nCo-coordinating Investigator: Pr Yves BERTRAND\nMethodologist/Biostatistics: Pr Sylvie CHEVRET\nLeukemia Biology Coordination: Pr Hélène CAVE\nAsparaginase Studies Dr Jean-François BENOIST\nDr Christine SABAN",
         "Study Sponsor": "Assistance Publique-Hôpitaux de Paris",
@@ -421,7 +421,7 @@
         "Sources of funding for the\ntrial": "PHRC National 2019 - Ministère des solidarités et de la Santé",
         "Trial will have a Data\nMonitoring Committee": "Yes"
     },
-    "MSC-AT-SSc": {
+    "MSC-AT-SSC": {
         "Full title": "Phase I/II randomized clinical trial of allogeneic adipose\ntissue-derived mesenchymal stromal cells systemic\ninfusion in severe systemic sclerosis",
         "Acronym/reference": "MSC-AT-SSc",
         "Coordinating investigator and\nScientific director": "Prof. Dominique FARGE\nMATHEC, Centre de Référence des Maladies auto-\nimmunes systémiques Rares d’Ile-de-France, Filière\nFAI2R, IRSL, EA-3518, Université de Paris,\nHôpital Saint Louis\n1 avenue Claude Vellefaux\n75010 PARIS",
