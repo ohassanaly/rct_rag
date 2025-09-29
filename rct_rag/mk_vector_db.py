@@ -5,27 +5,26 @@ import chromadb
 import os
 from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 
-load_dotenv()
-
-chroma_client = chromadb.CloudClient(
-  api_key=os.getenv("chromadb_api_key"),
-  tenant = os.getenv("chroma_tenant"),
-  database='rct_rag'
-)
-
-#run only once for creating collection
-# collection = chroma_client.create_collection(
-#     name="rct_summaries",
-#     embedding_function=OpenAIEmbeddingFunction(
-#         api_key=os.getenv("OPENAI_API_KEY"),
-#         model_name="text-embedding-3-small"
-#     )
-# )
-
 if __name__ == "__main__":
+
+    load_dotenv()
+    chroma_client = chromadb.CloudClient(
+    api_key=os.getenv("chromadb_api_key"),
+    tenant = os.getenv("chroma_tenant"),
+    database='rct_rag'
+    )
+    #loading src data
     with open(process_text_path, 'r', encoding="utf-8") as file:
         data = json.load(file)
-
+    
+    #run only once for creating collection
+    # collection = chroma_client.create_collection(
+    #     name="rct_summaries",
+    #     embedding_function=OpenAIEmbeddingFunction(
+    #         api_key=os.getenv("OPENAI_API_KEY"),
+    #         model_name="text-embedding-3-small"
+    #     )
+    # )
     collection = chroma_client.get_collection(name="rct_summaries")
 
     collection.add(
