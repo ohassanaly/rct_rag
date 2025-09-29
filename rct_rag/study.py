@@ -22,9 +22,11 @@ class Study():
     @staticmethod
     def normalize(text: str) -> str:
         """
-        Normalize text by removing extra spaces and converting to lowercase.
+        Normalize text by removing extra spaces, extra dashes and converting to lowercase.
         """
-        return re.sub(r'\s+', ' ', text.strip().lower())
+        text = re.sub(r'\s+', ' ', text.strip().lower())
+        text = re.sub(r'-\s', ' ', text.strip().lower())
+        return text
     
     def regroup_sections(self)-> None:
         """
@@ -67,6 +69,7 @@ if __name__ == "__main__":
         data = json.load(file)
     with open(acronym_path, 'r', encoding="utf-8") as file:
         acronym_dict = json.load(file)
+
         # #testing the loop for one study
         # study_name = list(data.keys())[0]
         # study_summary = list(data.values())[0]
@@ -80,6 +83,7 @@ if __name__ == "__main__":
         # print("_"*80)
         # print(study.summary)
 
+    #processing all the studies
     processed_studies = {}
     for study_name, summary in data.items():
         try :
