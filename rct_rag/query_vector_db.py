@@ -50,7 +50,7 @@ def query(user_query: str, collection, llm_client, section_filtering:str ="", to
         query_texts=[user_query] + rephrasing,
         n_results=top_k,
         include=["documents", "distances"],
-        where={"section": section_filtering}
+        where={"section": section_filtering} #eventually query several sections?
       )
 
     return result
