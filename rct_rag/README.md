@@ -1,7 +1,7 @@
 later improvements include :
 
 Software
--get response body in logging 
+ ~~-get response body in logging ~~
 -generate clean endpoints for the different use cases
 -deploy the backend API
 
