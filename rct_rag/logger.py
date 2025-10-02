@@ -1,12 +1,17 @@
 import logging
 import sys
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 # import os
 
 # from logtail import LogtailHandler #better stack
 
 # load_dotenv()
+
+from pathlib import Path
+
+path = Path('.')
+log_path = path / "rct_rag/test.log"
 
 #get logger
 logger = logging.getLogger()
@@ -18,7 +23,7 @@ formatter = logging.Formatter(
 
 #create handlers
 stream_handler = logging.StreamHandler(sys.stdout)
-file_handler = logging.FileHandler('app.log')
+file_handler = logging.FileHandler(log_path)
 # better_stack_handler = LogtailHandler(source_token=os.getenv("better_stack_token"), host = os.getenv("better_stack_host"))
 
 #set formatters
@@ -33,6 +38,8 @@ logger.handlers = [stream_handler, file_handler]
 #set log-level
 logger.setLevel(logging.INFO)
 
+
+#other experiments
 # from loguru import logger
 # from logtail import LogtailHandler #better stack
 
