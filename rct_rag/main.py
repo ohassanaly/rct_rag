@@ -2,9 +2,23 @@
 
 from query_vector_db import *
 from typing import Annotated
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, Request
+from logger import logger
 
 app = FastAPI()
+
+@app.middleware("http")
+async def log_middleware(request: Request, call_next):
+    log_dict = {
+        'url' : request.url.path,
+        'method' : request.method,
+        'params' : request.query_params
+    }
+    logger.info(log_dict)
+
+    response = await call_next(request)
+
+    return(response)
 
 load_dotenv()
 llm_client = OpenAI()
@@ -19,3 +33,11 @@ collection = chroma_client.get_collection(name="rct_summaries")
 async def query_endpoint(user_input: Annotated[str, Query(max_length=50)]):
     result = query(user_input, collection, llm_client, "INCLUSION CRITERIA")
     return {"ids" : result["ids"], "distances" : result["distances"]}
+
+#example : run http://127.0.0.1:8000/query?user_input=dose&finding
+
+#we should rather use this POST request
+@app.post("/search/")
+async def search_engine(user_input: str):
+    result = query(user_input, collection, llm_client, "INCLUSION CRITERIA")
+    return result
