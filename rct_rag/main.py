@@ -2,23 +2,13 @@
 
 from query_vector_db import *
 from typing import Annotated
-from fastapi import FastAPI, Query, Request
+from fastapi import FastAPI, Query
 from logger import logger
+from middleware import log_middleware
+from starlette.middleware.base import BaseHTTPMiddleware
 
 app = FastAPI()
-
-@app.middleware("http")
-async def log_middleware(request: Request, call_next):
-    log_dict = {
-        'url' : request.url.path,
-        'method' : request.method,
-        'params' : request.query_params
-    }
-    logger.info(log_dict)
-
-    response = await call_next(request)
-
-    return(response)
+app.add_middleware(BaseHTTPMiddleware, dispatch = log_middleware)
 
 load_dotenv()
 llm_client = OpenAI()
