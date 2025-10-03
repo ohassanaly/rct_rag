@@ -16,16 +16,19 @@ if __name__ == "__main__":
     with open(process_text_path, "r", encoding="utf-8") as file:
         data = json.load(file)
 
-    # run only once for creating collection
-    # collection = chroma_client.create_collection(
-    #     name="rct_summaries",
-    #     embedding_function=OpenAIEmbeddingFunction(
-    #         api_key=os.getenv("OPENAI_API_KEY"),
-    #         model_name="text-embedding-3-small"
-    #     )
-    # )
-    collection = chroma_client.get_collection(name="rct_summaries")
-    #1 line per study and per section
+    # run only once for creating the collection
+    collection = chroma_client.create_collection(
+        name="rct_sections",
+        embedding_function=OpenAIEmbeddingFunction(
+            api_key=os.getenv("OPENAI_API_KEY"),
+            model_name="text-embedding-3-large"
+        )
+    )
+    
+    #use it once the collection is created
+    collection = chroma_client.get_collection(name="rct_sections")
+
+    #Generate the vector database with 1 line per [study, section] pair
     for study, summary in data.items():
         for section, text in summary.items() :
             collection.add(ids = f"{study}, {section}",
@@ -33,10 +36,3 @@ if __name__ == "__main__":
                                        "section" : section}],
                            documents=[text],
             )
-    #previous version with only 1 line per study           
-    # collection.add(
-    #     ids=list(data.keys()),
-    #     documents=[
-    #         ", ".join(f"{k}:{v}" for k, v in d.items()) for d in list(data.values())
-    #     ],
-    # )
