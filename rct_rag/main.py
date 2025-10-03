@@ -21,7 +21,7 @@ collection = chroma_client.get_collection(name="rct_summaries")
 
 @app.get("/query") #TODO : use a post request instead ; the user_input must be a request body instead of a query parameter
 async def query_endpoint(user_input: Annotated[str, Query(max_length=50)]):
-    result = query(user_input, collection, llm_client, "INCLUSION CRITERIA")
+    result = query(user_input, collection, llm_client, logger, "INCLUSION CRITERIA")
     return {"ids" : result["ids"], "distances" : result["distances"]}
 
 #example : run http://127.0.0.1:8000/query?user_input=dose&finding
@@ -29,5 +29,5 @@ async def query_endpoint(user_input: Annotated[str, Query(max_length=50)]):
 #we should rather use this POST request
 @app.post("/search/")
 async def search_engine(user_input: str):
-    result = query(user_input, collection, llm_client, "INCLUSION CRITERIA")
-    return result
+    result = query(user_input, collection, llm_client, logger,"INCLUSION CRITERIA")
+    return rank_query_result(result)

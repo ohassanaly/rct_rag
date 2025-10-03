@@ -6,7 +6,7 @@ path = Path('.')
 log_path = path / "rct_rag/test.log" #dev mode ; in deployment, logs are expected in sys.stdout
 
 #get logger
-logger = logging.getLogger()
+logger = logging.getLogger("rct_rag")
 logger.setLevel(logging.INFO)
 
 #create formater
