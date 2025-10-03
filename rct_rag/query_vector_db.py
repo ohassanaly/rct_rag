@@ -4,7 +4,9 @@ import chromadb
 import os
 from pydantic import BaseModel
 from openai import OpenAI
-
+from logging import Logger
+from logger import logger
+import pandas as pd
 
 class RephrasedQuery(BaseModel):
     queries: list[str]
@@ -28,7 +30,7 @@ def rephrase_query(query: str, client) -> list[str]:
     event = completion.choices[0].message.parsed
     return event.queries
 
-def query(user_query: str, collection, llm_client, section_filtering:str ="", top_k: int = 2) -> dict:
+def query(user_query: str, collection, llm_client, logger: Logger, section_filtering:str ="", top_k: int = 2) -> dict:
     """
     given a user query :
     rephrases it
@@ -36,6 +38,7 @@ def query(user_query: str, collection, llm_client, section_filtering:str ="", to
     returns : top-k results ids and distance for each query
     """
     rephrasing = rephrase_query(user_query, llm_client)
+    logger.info({"search query" : [user_query] + rephrasing})
 
     if section_filtering == "":
           result = collection.query(
@@ -52,8 +55,25 @@ def query(user_query: str, collection, llm_client, section_filtering:str ="", to
         include=["documents", "distances"],
         where={"section": section_filtering} #eventually query several sections?
       )
-
     return result
+
+def rank_query_result(result: dict, top_k :int=3) -> str:
+    """
+    Input : result of the vector database query 
+    Output : JSON with results ids, distances and document content ranked by average distance to queries and keeping only top k results
+    """
+    results = []
+    for ids, dists, doc_texts in zip(result["ids"], result["distances"], result["documents"]):
+        for id_, dist, doc_text in zip(ids, dists, doc_texts):
+            results.append((id_, dist, doc_text))
+    df = pd.DataFrame(results, columns=["id", "distance", "doc_text"])
+
+    ranked_df = df.groupby(["id", "doc_text"])["distance"].mean().reset_index().sort_values(by="distance")
+
+    output = ranked_df[:top_k].to_json(orient="records")
+    logger.info({"result" : output})
+
+    return output
 
 if __name__ == "__main__":
 
@@ -67,6 +87,5 @@ if __name__ == "__main__":
     collection = chroma_client.get_collection(name="rct_summaries")
 
     user_query = "dose finding clinical trial"
-    result = query(user_query, collection, llm_client, "INCLUSION CRITERIA")
-    print(result["ids"])
-    print(result["distances"])
+    result = query(user_query, collection, llm_client, logger, "INCLUSION CRITERIA")
+    print(rank_query_result(result))
