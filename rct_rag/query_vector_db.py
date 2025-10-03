@@ -84,7 +84,7 @@ if __name__ == "__main__":
         tenant=os.getenv("chroma_tenant"),
         database="rct_rag",
     )
-    collection = chroma_client.get_collection(name="rct_summaries")
+    collection = chroma_client.get_collection(name="rct_sections")
 
     user_query = "dose finding clinical trial"
     result = query(user_query, collection, llm_client, logger, "INCLUSION CRITERIA")
